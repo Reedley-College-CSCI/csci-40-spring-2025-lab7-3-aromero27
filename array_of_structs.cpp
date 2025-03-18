@@ -16,9 +16,9 @@ const int MAX_DAYS = 31;
 // Function Prototypes
 void readTemperatures(TemperatureRecord arr[], int& size); // TODO: Fix the parameters
 void printTemperatures(const TemperatureRecord arr[], int size);
-TemperatureRecord findMin(const TemperatureRecord arr[], int size);
-TemperatureRecord findMax(const TemperatureRecord arr[], int size);
-double findAverage(const TemperatureRecord arr[], int size);
+//TemperatureRecord findMin(const TemperatureRecord arr[], int size);
+//TemperatureRecord findMax(const TemperatureRecord arr[], int size);
+//double findAverage(const TemperatureRecord arr[], int size);
 
 int main() {
     // TODO: Step 2 - Declare an array of TemperatureRecord structs (MAX_DAYS size)
@@ -33,9 +33,9 @@ int main() {
     printTemperatures(arr, size);
 
     // TODO: Step 5 - Compute and display min, max, and average temperature
-    TemperatureRecord minTemp = findMin(arr, size);
-    TemperatureRecord maxTemp = findMax(arr, size);
-    double avgTemp = findAverage(arr, size);
+   // TemperatureRecord minTemp = findMin(arr, size);
+   // TemperatureRecord maxTemp = findMax(arr, size);
+    //double avgTemp = findAverage(arr, size);
 
     return 0;
 }
@@ -57,8 +57,11 @@ dataIn.close();
 
 // TODO: Step 7 - Implement printTemperatures()
 // Print all stored temperatures in a formatted table
-void printTemperatrues(const TemperatureRecord arr[], int size) {
-
+void printTemperatures(const TemperatureRecord arr[], int size) {
+    cout << "Day   Temp" << endl;
+    for (int i = 0; i < size; ++i) {
+        cout << arr[i].day << "     " << arr[i].temperature << endl;
+    }
 }
 
 // TODO: Step 8 - Implement findMin()
